@@ -1,0 +1,39 @@
+{
+    "testimonials": [
+      {
+        "id": 1,
+        "text": "Green Aura transformed our backyard into an oasis we enjoy every day. Their attention to detail and knowledge of plants is impressive.",
+        "name": "Sarah Johnson",
+        "location": "Residential Client",
+        "image": "/images/clients/sarah.jpg"
+      },
+      {
+        "id": 2,
+        "text": "The team at Green Aura designed and installed the perfect low-maintenance landscaping for our office complex. The result is beautiful and has increased our property value.",
+        "name": "Michael Torres",
+        "location": "Commercial Client",
+        "image": "/images/clients/michael.jpg"
+      },
+      {
+        "id": 3,
+        "text": "Their garden maintenance service keeps our yard looking perfect year-round. Reliable, professional, and thorough.",
+        "name": "Emma Patel",
+        "location": "Residential Client",
+        "image": "/images/clients/emma.jpg"
+      },
+      {
+        "id": 4,
+        "text": "Green Aura helped us create a sustainable garden with native plants that attracts local wildlife. We love how eco-friendly their approach is.",
+        "name": "David Chen",
+        "location": "Residential Client",
+        "image": "/images/clients/david.jpg"
+      },
+      {
+        "id": 5,
+        "text": "Our restaurant patio was completely reimagined by Green Aura. The outdoor dining space they created has become our most requested seating area.",
+        "name": "Lisa Rodriguez",
+        "location": "Commercial Client",
+        "image": "/images/clients/lisa.jpg"
+      }
+    ]
+  }

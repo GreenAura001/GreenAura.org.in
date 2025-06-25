@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <title><%= title %></title>
+  <!-- CSS files -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  
+  <!-- Page-specific CSS -->
+  <% if (activeRoute === 'services') { %>
+  <link rel="stylesheet" href="/css/services.css">
+  <% } %>
+  <% if (activeRoute === 'contact') { %>
+  <link rel="stylesheet" href="/css/contact.css">
+  <% } %>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="/">
+          <img src="/images/logo.png" alt="Green Aura">
+          <!-- <span>Green Aura</span> -->
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/" class="<%= activeRoute === 'home' ? 'active' : '' %>">Home</a></li>
+          <li><a href="/services" class="<%= activeRoute === 'services' ? 'active' : '' %>">Services</a></li>
+          <li><a href="/portfolio" class="<%= activeRoute === 'portfolio' ? 'active' : '' %>">Portfolio</a></li>
+          <li><a href="/about" class="<%= activeRoute === 'about' ? 'active' : '' %>">About</a></li>
+          <li><a href="/contact" class="<%= activeRoute === 'contact' ? 'active' : '' %>">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <main>
