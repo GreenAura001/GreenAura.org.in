@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/images/GreenAura-loga.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <title><%= title %></title>
   <!-- CSS files -->
@@ -34,9 +36,9 @@
         <ul>
           <li><a href="/" class="<%= activeRoute === 'home' ? 'active' : '' %>">Home</a></li>
           <li><a href="/services" class="<%= activeRoute === 'services' ? 'active' : '' %>">Services</a></li>
-          <li><a href="/portfolio" class="<%= activeRoute === 'portfolio' ? 'active' : '' %>">Portfolio</a></li>
           <li><a href="/about" class="<%= activeRoute === 'about' ? 'active' : '' %>">About</a></li>
           <li><a href="/contact" class="<%= activeRoute === 'contact' ? 'active' : '' %>">Contact</a></li>
+          <li><a href="/faqs" class="<%= activeRoute === 'faqs' ? 'active' : '' %>">FAQS</a></li>
         </ul>
       </nav>
       <div class="mobile-menu-toggle">

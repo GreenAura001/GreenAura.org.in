@@ -45,7 +45,7 @@
 /* About Header Section */
 .about-header {
     background: linear-gradient(rgba(6, 70, 0, 0.493), rgba(6, 70, 0, 0.493)),
-                url('../images/About-Header-image.png'); /* Adjust path and filename as needed */
+                url('../images/about/About-Header-image.png'); /* Adjust path and filename as needed */
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -364,7 +364,7 @@
 /* CTA Section */
 .cta-section {
      background: linear-gradient(rgba(6, 70, 0, 0.493), rgba(6, 70, 0, 0.493)),
-                url('../images/CTA-image.png'); /* Adjust path and filename as needed */
+                url('../images/about/CTA-image.png'); /* Adjust path and filename as needed */
     color: var(--white);
     padding: 7rem 0;
     text-align: center;

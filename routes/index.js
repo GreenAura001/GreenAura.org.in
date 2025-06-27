@@ -20,7 +20,6 @@ router.get('/', (req, res) => {
   const testimonials = getTestimonials();
   res.render('index', { 
     title: 'Green Aura',
-    image: "../images/hero-bg.jpg",
     activeRoute: 'home',
     testimonials: testimonials.testimonials // Pass testimonials to the template
   });
@@ -31,14 +30,6 @@ router.get('/services', (req, res) => {
   res.render('services', { 
     title: 'Our Services - Green Aura',
     activeRoute: 'services'
-  });
-});
-
-// Portfolio page
-router.get('/portfolio', (req, res) => {
-  res.render('portfolio', { 
-    title: 'Our Portfolio - Green Aura',
-    activeRoute: 'portfolio'
   });
 });
 
@@ -67,6 +58,14 @@ router.post('/contact', (req, res) => {
     title: 'Contact Us - Green Aura',
     activeRoute: 'contact',
     message: 'Thank you for your message. We will get back to you soon!'
+  });
+});
+
+// FAQS page
+router.get('/faqs', (req, res) => {
+  res.render('faqs', { 
+    title: 'Our faqs - Green Aura',
+    activeRoute: 'faqs'
   });
 });
 
