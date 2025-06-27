@@ -64,7 +64,7 @@ router.post('/contact', (req, res) => {
 // FAQS page
 router.get('/faqs', (req, res) => {
   res.render('faqs', { 
-    title: 'Our faqs - Green Aura',
+    title: 'Our FAQs - Green Aura',
     activeRoute: 'faqs'
   });
 });

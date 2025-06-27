@@ -1,5 +1,181 @@
 <%- include('partials/header') %>
 
+<link rel="stylesheet" href="/css/faqs.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1 class="page-title">Frequently Asked Questions</h1>
+        <p class="page-subtitle">Everything you need to know about our garden setup services</p>
+        
+        <div class="faq-container">
+
+    <!-- 1 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">What areas do you currently serve?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            We currently offer our services across <strong>Kolkata and nearby locations</strong>. If you’re unsure whether we cover your area, feel free to <span class="contact-highlight">contact us via WhatsApp</span>.
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">How much does a basic garden setup cost?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            Every space is unique, and so is every garden. The final cost depends on factors like <strong>size, plant choices, and your design preferences</strong>. We offer a <span class="contact-highlight">free consultation</span> to understand your needs and provide a tailored quote—no obligation.
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">I live in a flat with very little space—can I still get a garden setup?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            <strong>Absolutely!</strong> We specialize in <span class="contact-highlight">compact terrace and balcony designs</span>. Even with limited space, we can create a <strong>beautiful, functional green corner</strong> for your home.
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">Do you provide all the plants and materials, or do I need to buy them separately?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            <strong>Green Aura provides a complete solution</strong>. We take care of all <strong>plants, planters, soil, and design materials</strong>—you just sit back and enjoy your green space coming to life.
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">How do I book your service?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            Simply click <span class="contact-highlight">“Get a Quote”</span> on our website or message us directly on <span class="contact-highlight">WhatsApp</span>. We’ll get back to you <strong>within 24 hours</strong>.
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">What kind of maintenance services do you offer?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            Our maintenance includes <strong>plant health checks, pruning, re-potting, fertilizing, and seasonal pest control</strong>. You can opt for <strong>monthly or quarterly plans</strong> based on your garden’s needs.
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">Do you offer artificial turf/lawn installations?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            <strong>Yes</strong>, we offer both <strong>natural and artificial grass</strong> depending on your space and maintenance preference. We’ll guide you on what’s best for you.
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">Can you create a garden for rented flats without drilling or permanent changes?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            <strong>Definitely.</strong> We offer <span class="contact-highlight">non-invasive setups</span> using <strong>movable planters, vertical racks, and floor décor</strong> that won’t damage walls or floors.
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">How long does it take to complete a garden setup?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            Most <strong>balcony or terrace gardens</strong> take <strong>1–3 days</strong> depending on the design. Larger spaces like lawns or backyards may take <strong>up to a week</strong>.
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">Will you visit my site before starting the work?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            <strong>Yes.</strong> We usually begin with a <span class="contact-highlight">consultation</span>—either <strong>virtual (video call)</strong> or <strong>on-site</strong>—to understand the space, lighting, and your preferences.
+        </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">Can you help with vertical garden installations?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            <strong>Absolutely!</strong> We design and install <strong>vertical gardens</strong> for <strong>walls, balconies, or indoor spaces</strong> using compact frames and <strong>low-maintenance plants</strong>.
+        </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">Can you help me design a low-maintenance garden?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            Yes! We specialize in <strong>low-maintenance designs</strong> using <strong>hardy plants, smart layouts, and minimal watering needs</strong>—perfect for busy homeowners or beginners.
+        </div>
+    </div>
+
+    <!-- 13 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">What if some of my plants die after installation?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            We provide <strong>aftercare tips</strong> and offer <strong>maintenance plans</strong> to help keep your plants thriving. If there’s a genuine issue <strong>within 7 days</strong>, we’ll look into it.
+        </div>
+    </div>
+
+    <!-- 14 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">Do you offer services for offices or commercial spaces?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            <strong>Yes!</strong> We offer <strong>garden design and plant maintenance services</strong> for <strong>office lobbies, restaurants, cafés, and commercial terraces</strong>.
+        </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span class="faq-question-text">Do you give plant care instructions after setup?</span>
+            <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-answer">
+            <strong>Absolutely.</strong> Every client receives <strong>aftercare instructions</strong>, including <strong>watering schedules, sunlight needs, and seasonal tips</strong>.
+        </div>
+    </div>
+
+    </main>
 
 <%- include('partials/footer') %>
