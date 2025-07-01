@@ -22,6 +22,7 @@
   <% if (activeRoute === 'contact') { %>
   <link rel="stylesheet" href="/css/contact.css">
   <% } %>
+
 </head>
 <body>
   <header>
@@ -32,7 +33,7 @@
           <!-- <span>Green Aura</span> -->
         </a>
       </div>
-      <nav>
+      <nav id="nav-menu">
         <ul>
           <li><a href="/" class="<%= activeRoute === 'home' ? 'active' : '' %>">Home</a></li>
           <li><a href="/services" class="<%= activeRoute === 'services' ? 'active' : '' %>">Services</a></li>
@@ -41,11 +42,11 @@
           <li><a href="/faqs" class="<%= activeRoute === 'faqs' ? 'active' : '' %>">FAQs</a></li>
         </ul>
       </nav>
-      <div class="mobile-menu-toggle">
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </div>
   </header>
   <main>
