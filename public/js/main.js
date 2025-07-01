@@ -1,274 +1,32 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const nav = document.querySelector('nav');
-    
-    if (menuToggle && nav) {
-      menuToggle.addEventListener('click', function() {
-        nav.classList.toggle('active');
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      
+      if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          mobileToggle.classList.toggle('active');
+        });
         
-        // Animation for menu icon
-        const spans = menuToggle.querySelectorAll('span');
-        spans.forEach(span => span.classList.toggle('active'));
-      });
-    }
-    
-    // Auto-hide success messages after 5 seconds
-    const successMessage = document.querySelector('.success-message');
-    if (successMessage) {
-      setTimeout(function() {
-        successMessage.style.opacity = '0';
-        setTimeout(function() {
-          successMessage.style.display = 'none';
-        }, 500);
-      }, 5000);
-    }
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 70, // Adjust for fixed header
-            behavior: 'smooth'
+        // Close menu when clicking on a link
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            mobileToggle.classList.remove('active');
           });
-        }
-      });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!mobileToggle.contains(event.target) && !navMenu.contains(event.target)) {
+            navMenu.classList.remove('active');
+            mobileToggle.classList.remove('active');
+          }
+        });
+      }
     });
-    
-    // Dynamic Testimonials
-    const testimonialSlider = document.getElementById('testimonial-slider');
-    const testimonialDots = document.getElementById('testimonial-dots');
-    const prevButton = document.getElementById('prev-testimonial');
-    const nextButton = document.getElementById('next-testimonial');
-    
-    if (testimonialSlider) {
-      let testimonials = [];
-      let currentTestimonialIndex = 0;
-      
-      // Fetch testimonials from JSON file
-      fetch('/data/testimonials.json')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(data => {
-          testimonials = data.testimonials;
-          if (testimonials.length > 0) {
-            renderTestimonials();
-            setupTestimonialControls();
-          } else {
-            testimonialSlider.innerHTML = '<p>No testimonials available.</p>';
-          }
-        })
-        .catch(error => {
-          console.error('Error fetching testimonials:', error);
-          testimonialSlider.innerHTML = '<p>Failed to load testimonials. Please try again later.</p>';
-        });
-      
-      // Render testimonials
-      function renderTestimonials() {
-        // Clear loader
-        testimonialSlider.innerHTML = '';
-        
-        // Create testimonial elements
-        testimonials.forEach((testimonial, index) => {
-          const testimonialElement = document.createElement('div');
-          testimonialElement.className = 'testimonial';
-          testimonialElement.style.display = index === currentTestimonialIndex ? 'block' : 'none';
-          testimonialElement.style.opacity = index === currentTestimonialIndex ? '1' : '0';
-          
-          const testimonialContent = `
-            <div class="testimonial-content">
-              <p>"${testimonial.text}"</p>
-              <div class="client">
-                ${testimonial.image ? `<img src="${testimonial.image}" alt="${testimonial.name}" class="client-image">` : ''}
-                <div class="client-info">
-                  <span class="name">${testimonial.name}</span>
-                  <span class="location">${testimonial.location}</span>
-                </div>
-              </div>
-            </div>
-          `;
-          
-          testimonialElement.innerHTML = testimonialContent;
-          testimonialSlider.appendChild(testimonialElement);
-        });
-        
-        // Create dots for pagination
-        testimonialDots.innerHTML = '';
-        testimonials.forEach((_, index) => {
-          const dot = document.createElement('span');
-          dot.className = `dot ${index === currentTestimonialIndex ? 'active' : ''}`;
-          dot.addEventListener('click', () => goToTestimonial(index));
-          testimonialDots.appendChild(dot);
-        });
-      }
-      
-      // Setup controls
-      function setupTestimonialControls() {
-        if (prevButton && nextButton) {
-          prevButton.addEventListener('click', () => {
-            goToTestimonial((currentTestimonialIndex - 1 + testimonials.length) % testimonials.length);
-          });
-          
-          nextButton.addEventListener('click', () => {
-            goToTestimonial((currentTestimonialIndex + 1) % testimonials.length);
-          });
-        }
-        
-        // Auto rotate testimonials
-        setInterval(() => {
-          if (!document.hidden) { // Only rotate when page is visible
-            goToTestimonial((currentTestimonialIndex + 1) % testimonials.length);
-          }
-        }, 6000);
-      }
-      
-      // Go to specific testimonial
-      function goToTestimonial(index) {
-        const testimonialElements = testimonialSlider.querySelectorAll('.testimonial');
-        const dots = testimonialDots.querySelectorAll('.dot');
-        
-        // Hide current testimonial
-        if (testimonialElements[currentTestimonialIndex]) {
-          testimonialElements[currentTestimonialIndex].style.opacity = '0';
-          setTimeout(() => {
-            testimonialElements[currentTestimonialIndex].style.display = 'none';
-            
-            // Show new testimonial
-            currentTestimonialIndex = index;
-            testimonialElements[currentTestimonialIndex].style.display = 'block';
-            
-            setTimeout(() => {
-              testimonialElements[currentTestimonialIndex].style.opacity = '1';
-            }, 50);
-            
-            // Update dots
-            dots.forEach((dot, i) => {
-              dot.classList.toggle('active', i === currentTestimonialIndex);
-            });
-          }, 300);
-        }
-      }
-    }
-    
-    // Form validation
-    const contactForm = document.querySelector('.contact-form form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        let isValid = true;
-        
-        // Get all required inputs
-        const requiredInputs = contactForm.querySelectorAll('[required]');
-        
-        // Check each required input
-        requiredInputs.forEach(input => {
-          if (!input.value.trim()) {
-            isValid = false;
-            
-            // Add error class
-            input.classList.add('error');
-            
-            // Create error message if doesn't exist
-            let errorMsg = input.parentNode.querySelector('.error-message');
-            if (!errorMsg) {
-              errorMsg = document.createElement('div');
-              errorMsg.className = 'error-message';
-              errorMsg.textContent = 'This field is required';
-              input.parentNode.appendChild(errorMsg);
-            }
-          } else {
-            // Remove error class
-            input.classList.remove('error');
-            
-            // Remove error message if exists
-            const errorMsg = input.parentNode.querySelector('.error-message');
-            if (errorMsg) {
-              errorMsg.remove();
-            }
-          }
-        });
-        
-        // Email validation
-        const emailInput = contactForm.querySelector('input[type="email"]');
-        if (emailInput && emailInput.value.trim()) {
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailPattern.test(emailInput.value)) {
-            isValid = false;
-            
-            // Add error class
-            emailInput.classList.add('error');
-            
-            // Create error message if doesn't exist
-            let errorMsg = emailInput.parentNode.querySelector('.error-message');
-            if (!errorMsg) {
-              errorMsg = document.createElement('div');
-              errorMsg.className = 'error-message';
-              errorMsg.textContent = 'Please enter a valid email address';
-              emailInput.parentNode.appendChild(errorMsg);
-            } else {
-              errorMsg.textContent = 'Please enter a valid email address';
-            }
-          }
-        }
-        
-        // Prevent form submission if invalid
-        if (!isValid) {
-          e.preventDefault();
-        }
-      });
-      
-      // Clear error messages on input
-      contactForm.querySelectorAll('.form-control').forEach(input => {
-        input.addEventListener('input', function() {
-          // Remove error class
-          this.classList.remove('error');
-          
-          // Remove error message if exists
-          const errorMsg = this.parentNode.querySelector('.error-message');
-          if (errorMsg) {
-            errorMsg.remove();
-          }
-        });
-      });
-    }
-    
-    // Add animation to feature cards when they come into view
-    const featureCards = document.querySelectorAll('.feature-card');
-    
-    if (featureCards.length > 0) {
-      const observeFeatures = () => {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.2 });
-        
-        featureCards.forEach(card => {
-          observer.observe(card);
-        });
-      };
-      
-      // Check if IntersectionObserver is supported
-      if ('IntersectionObserver' in window) {
-        observeFeatures();
-      } else {
-        // Fallback for browsers that don't support IntersectionObserver
-        featureCards.forEach(card => {
-          card.classList.add('animate');
-        });
-      }
-    }
-  });
 
   // scripts/scroll-bar.js
 document.addEventListener('DOMContentLoaded', () => {
