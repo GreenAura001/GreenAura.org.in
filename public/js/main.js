@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
         function openGmailCompose() {
-            const email = 'contact@greenaura.in';
+            const email = 'support@greenaura.org.in';
             const subject = encodeURIComponent('Garden Consultation Inquiry');
             const body = encodeURIComponent('Hi Green Aura Team,\n\nI am interested in your garden consultation services. Please contact me to discuss my requirements.\n\nThank you!');
             
