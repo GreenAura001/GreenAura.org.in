@@ -1,347 +1,607 @@
+<!-- Header partial will be included here -->
+<%- include('partials/header') %>
+<!-- Primary SEO Meta Tags -->
+<meta
+  name="description"
+  content="Transform your outdoor spaces with Green Aura's expert gardening services in Kolkata. Specializing in terrace garden design, balcony gardens, lawn installation, and professional garden maintenance. Get your free consultation today."
+/>
+<meta
+  name="keywords"
+  content="gardening services Kolkata, terrace garden design, balcony garden, lawn installation, garden maintenance, landscaping Kolkata, professional gardeners, outdoor space design"
+/>
+<meta name="author" content="Green Aura" />
+<link rel="canonical" href="https://greenaura.in/services" />
 
-    <!-- Header partial will be included here -->
-    <%- include('partials/header') %>
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://greenaura.in/services" />
+<meta
+  property="og:title"
+  content="Professional Gardening Services in Kolkata | Green Aura"
+/>
+<meta
+  property="og:description"
+  content="Expert terrace garden design, balcony gardens, lawn installation & maintenance services in Kolkata. Transform your outdoor space with Green Aura's professional gardening solutions."
+/>
+<meta
+  property="og:image"
+  content="https://greenaura.in/images/services/og-services-image.jpg"
+/>
+<meta property="og:locale" content="en_IN" />
+<meta property="og:site_name" content="Green Aura" />
 
- <section class="page-banner">
-        <div class="Services-container">
-            <h1>Our Services</h1>
-            <p>Comprehensive gardening and landscaping solutions for every need</p>
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://greenaura.in/services" />
+<meta
+  property="twitter:title"
+  content="Professional Gardening Services in Kolkata | Green Aura"
+/>
+<meta
+  property="twitter:description"
+  content="Expert terrace garden design, balcony gardens, lawn installation & maintenance services in Kolkata. Transform your outdoor space today."
+/>
+<meta
+  property="twitter:image"
+  content="https://greenaura.in/images/services/twitter-services-image.jpg"
+/>
+
+<!-- Structured Data - Organization -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Green Aura",
+    "url": "https://greenaura.in",
+    "logo": "https://greenaura.in/images/logo.png",
+    "description": "Professional gardening and landscaping services in Kolkata",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kolkata",
+      "addressRegion": "West Bengal",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-XXXXXXXXXX",
+      "contactType": "customer service",
+      "areaServed": "Kolkata",
+      "availableLanguage": ["English", "Bengali", "Hindi"]
+    },
+    "sameAs": [
+      "https://facebook.com/greenaura",
+      "https://instagram.com/greenaura"
+    ]
+  }
+</script>
+
+<!-- Structured Data - Service -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Gardening and Landscaping Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Green Aura"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Kolkata"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Gardening Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Terrace Garden Design",
+            "description": "Professional terrace and balcony garden design services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Garden Maintenance",
+            "description": "Regular garden maintenance and plant care services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Lawn Installation",
+            "description": "Professional lawn installation and care services"
+          }
+        }
+      ]
+    }
+  }
+</script>
+
+<!-- Breadcrumb Structured Data -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://greenaura.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://greenaura.in/services"
+      }
+    ]
+  }
+</script>
+
+<section class="page-banner">
+  <div class="Services-container">
+    <h1>Our Services</h1>
+    <p>Comprehensive gardening and landscaping solutions for every need</p>
+  </div>
+</section>
+
+<section class="services-overview">
+  <div class="Services-container">
+    <div class="service-categories">
+      <div class="service-category">
+        <div class="category-icon">🏡</div>
+        <h2>Terrace & Balcony Garden Design</h2>
+        <p>Transform your home garden into a personal paradise</p>
+        <a href="#terrace-balcony" class="btn btn-outline">Learn More</a>
+      </div>
+      <div class="service-category">
+        <div class="category-icon">🔧</div>
+        <h2>Garden Maintenance Services</h2>
+        <p>Professional care to keep your outdoor spaces thriving</p>
+        <a href="#maintenance" class="btn btn-outline">Learn More</a>
+      </div>
+      <div class="service-category">
+        <div class="category-icon">🌿</div>
+        <h2>Lawn Installation & Care</h2>
+        <p>Transform empty ground into soft, green beauty</p>
+        <a href="#lawn-care" class="btn btn-outline">Learn More</a>
+      </div>
+      <div class="service-category coming-soon">
+        <div class="category-icon">🏗️</div>
+        <h2>Garden Structures & Décor</h2>
+        <p>Design meets functionality in your garden</p>
+        <a href="#structures" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 1: Terrace & Balcony Garden Design -->
+<section id="terrace-balcony" class="service-section">
+  <div class="Services-container">
+    <div class="service-header">
+      <h2>1. Terrace & Balcony Garden Design</h2>
+      <p class="subtitle">
+        Breathe life into your outdoor space—no matter how small.
+      </p>
+    </div>
+
+    <div class="service-content">
+      <p class="service-description">
+        Terraces and balconies are often underused, but with a little vision and
+        the right plants, they can become the most peaceful corner of your home.
+        Whether you want a lush green space for tea time, a private reading
+        nook, or a burst of colorful flowers, we bring it to life.
+      </p>
+
+      <!-- Image Gallery for Terrace & Balcony -->
+      <div class="service-gallery">
+        <h3 class="gallery-title">Our Terrace & Balcony Transformations</h3>
+        <div class="gallery-grid grid-4">
+          <div class="gallery-item">
+            <img
+              src="/images/services/1-1OurTerrace&BalconyTransformations.jpg"
+              alt="Blooming wall decor"
+            />
+            <!-- <div class="placeholder">🏡</div> -->
+            <div class="image-overlay">
+              <h4>Blooming wall decor</h4>
+              <!-- <p>Empty balcony space</p> -->
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="/images/services/1-2OurTerrace&BalconyTransformations.jpg"
+              alt="Green Corner with Morning Light"
+            />
+            <!-- <div class="placeholder">🌿</div> -->
+            <div class="image-overlay">
+              <h4>Green Corner with Morning Light</h4>
+              <!-- <p>Lush green paradise</p> -->
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="/images/services/1-3OurTerrace&BalconyTransformations.jpg"
+              alt="Blooming balcony view"
+            />
+            <!-- <div class="placeholder">🌱</div> -->
+            <div class="image-overlay">
+              <h4>Blooming balcony view</h4>
+              <!-- <p>Space-saving design</p> -->
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="/images/services/1-4OurTerrace&BalconyTransformations.jpg"
+              alt="Rooftop bliss"
+            />
+            <!-- <div class="placeholder">☕</div> -->
+            <div class="image-overlay">
+              <h4>Rooftop bliss</h4>
+              <!-- <p>Perfect for relaxation</p> -->
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section class="services-overview">
-        <div class="Services-container">
-            <div class="service-categories">
-                <div class="service-category">
-                    <div class="category-icon">🏡</div>
-                    <h2>Terrace & Balcony Garden Design</h2>
-                    <p>Transform your home garden into a personal paradise</p>
-                    <a href="#terrace-balcony" class="btn btn-outline">Learn More</a>
-                </div>
-                <div class="service-category">
-                    <div class="category-icon">🔧</div>
-                    <h2>Garden Maintenance Services</h2>
-                    <p>Professional care to keep your outdoor spaces thriving</p>
-                    <a href="#maintenance" class="btn btn-outline">Learn More</a>
-                </div>
-                <div class="service-category">
-                    <div class="category-icon">🌿</div>
-                    <h2>Lawn Installation & Care</h2>
-                    <p>Transform empty ground into soft, green beauty</p>
-                    <a href="#lawn-care" class="btn btn-outline">Learn More</a>
-                </div>
-                <div class="service-category coming-soon">
-                    <div class="category-icon">🏗️</div>
-                    <h2>Garden Structures & Décor</h2>
-                    <p>Design meets functionality in your garden</p>
-                    <a href="#structures" class="btn btn-outline">Learn More</a>
-                </div>
-            </div>
+      <div class="feature-box">
+        <h3>💡 Why It Matters</h3>
+        <p>A balcony garden doesn't just look good—it:</p>
+        <ul>
+          <li>Reduces indoor heat</li>
+          <li>Acts as a natural privacy screen</li>
+          <li>Brings calm and nature into daily life</li>
+          <li>Improves air quality and mental wellness</li>
+        </ul>
+      </div>
+
+      <div class="feature-box">
+        <h3>🛠 What We Do</h3>
+        <p>
+          At Green Aura, we don't just "put some pots" and call it a garden. We
+          design:
+        </p>
+        <ul>
+          <li>
+            Sunlight-based plant layout (because not all balconies get the same
+            light)
+          </li>
+          <li>Vertical gardening systems to save space</li>
+          <li>Planter arrangement for easy maintenance and visual flow</li>
+          <li>
+            Themes like flowering balcony, Zen style, kitchen garden, or mixed
+            jungle
+          </li>
+          <li>
+            Installation of all elements, including soil mix, pots, and
+            placement
+          </li>
+        </ul>
+      </div>
+
+      <div class="feature-box">
+        <h3>🌱 Ideal Plants for Balconies</h3>
+        <div class="plant-grid">
+          <div class="plant-category">
+            <h4>For Sunlight</h4>
+            <p>Bougainvillea, Portulaca, Aloe Vera, Hibiscus</p>
+          </div>
+          <div class="plant-category">
+            <h4>For Shade</h4>
+            <p>Money plant, Ferns, Snake plant, Philodendrons</p>
+          </div>
+          <div class="plant-category">
+            <h4>For Edibles</h4>
+            <p>Mint, Basil, Curry Leaves, Tomatoes in pots</p>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Service 1: Terrace & Balcony Garden Design -->
-    <section id="terrace-balcony" class="service-section">
-        <div class="Services-container">
-            <div class="service-header">
-                <h2>1. Terrace & Balcony Garden Design</h2>
-                <p class="subtitle">Breathe life into your outdoor space—no matter how small.</p>
+      <!-- Consultation Button -->
+      <div class="consultation-cta">
+        <a href="/contact" class="btn btn-consultation"
+          >Schedule Free Consultation</a
+        >
+        <p class="cta-note">
+          Get a personalized design plan for your terrace or balcony
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 2: Garden Maintenance Services -->
+<section id="maintenance" class="service-section">
+  <div class="Services-container">
+    <div class="service-header">
+      <h2>2. Garden Maintenance Services</h2>
+      <p class="subtitle">Your plants need love—just like your home.</p>
+    </div>
+
+    <div class="service-content">
+      <p class="service-description">
+        Many people buy plants and forget that a garden is a living ecosystem.
+        Over time, without proper care, leaves yellow, pests appear, and the
+        beauty fades. That's where Green Aura steps in. We provide regular,
+        professional plant care services so your garden stays fresh and
+        thriving—even if you have no time to care for it yourself.
+      </p>
+
+      <!-- Image Gallery for Maintenance -->
+      <div class="service-gallery">
+        <h3 class="gallery-title">Professional Garden Care</h3>
+        <div class="gallery-grid grid-3">
+          <div class="gallery-item">
+            <img
+              src="/images/services/2-1ProfessionalGardenCare.jpg"
+              alt="Expert prunning"
+            />
+            <!-- <div class="placeholder">✂️</div> -->
+            <div class="image-overlay">
+              <h4>Expert prunning</h4>
+              <!-- <p>Healthy growth maintenance</p> -->
             </div>
-            
-            <div class="service-content">
-                <p class="service-description">
-                    Terraces and balconies are often underused, but with a little vision and the right plants, they can become the most peaceful corner of your home. Whether you want a lush green space for tea time, a private reading nook, or a burst of colorful flowers, we bring it to life.
-                </p>
-
-                <!-- Image Gallery for Terrace & Balcony -->
-                <div class="service-gallery">
-                    <h3 class="gallery-title">Our Terrace & Balcony Transformations</h3>
-                    <div class="gallery-grid grid-4">
-                        <div class="gallery-item">
-                            <img src="/images/services/1-1OurTerrace&BalconyTransformations.jpg" alt="Blooming wall decor">
-                            <!-- <div class="placeholder">🏡</div> -->
-                            <div class="image-overlay">
-                                <h4>Blooming wall decor</h4>
-                                <!-- <p>Empty balcony space</p> -->
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="/images/services/1-2OurTerrace&BalconyTransformations.jpg" alt="Green Corner with Morning Light">
-                            <!-- <div class="placeholder">🌿</div> -->
-                            <div class="image-overlay">
-                                <h4>Green Corner with Morning Light</h4>
-                                <!-- <p>Lush green paradise</p> -->
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="/images/services/1-3OurTerrace&BalconyTransformations.jpg" alt="Blooming balcony view">
-                            <!-- <div class="placeholder">🌱</div> -->
-                            <div class="image-overlay">
-                                <h4>Blooming balcony view</h4>
-                                <!-- <p>Space-saving design</p> -->
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="/images/services/1-4OurTerrace&BalconyTransformations.jpg" alt="Rooftop bliss">
-                            <!-- <div class="placeholder">☕</div> -->
-                            <div class="image-overlay">
-                                <h4>Rooftop bliss</h4>
-                                <!-- <p>Perfect for relaxation</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="feature-box">
-                    <h3>💡 Why It Matters</h3>
-                    <p>A balcony garden doesn't just look good—it:</p>
-                    <ul>
-                        <li>Reduces indoor heat</li>
-                        <li>Acts as a natural privacy screen</li>
-                        <li>Brings calm and nature into daily life</li>
-                        <li>Improves air quality and mental wellness</li>
-                    </ul>
-                </div>
-
-                <div class="feature-box">
-                    <h3>🛠 What We Do</h3>
-                    <p>At Green Aura, we don't just "put some pots" and call it a garden. We design:</p>
-                    <ul>
-                        <li>Sunlight-based plant layout (because not all balconies get the same light)</li>
-                        <li>Vertical gardening systems to save space</li>
-                        <li>Planter arrangement for easy maintenance and visual flow</li>
-                        <li>Themes like flowering balcony, Zen style, kitchen garden, or mixed jungle</li>
-                        <li>Installation of all elements, including soil mix, pots, and placement</li>
-                    </ul>
-                </div>
-
-                <div class="feature-box">
-                    <h3>🌱 Ideal Plants for Balconies</h3>
-                    <div class="plant-grid">
-                        <div class="plant-category">
-                            <h4>For Sunlight</h4>
-                            <p>Bougainvillea, Portulaca, Aloe Vera, Hibiscus</p>
-                        </div>
-                        <div class="plant-category">
-                            <h4>For Shade</h4>
-                            <p>Money plant, Ferns, Snake plant, Philodendrons</p>
-                        </div>
-                        <div class="plant-category">
-                            <h4>For Edibles</h4>
-                            <p>Mint, Basil, Curry Leaves, Tomatoes in pots</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Consultation Button -->
-                <div class="consultation-cta">
-                    <a href="/contact" class="btn btn-consultation">Schedule Free Consultation</a>
-                    <p class="cta-note">Get a personalized design plan for your terrace or balcony</p>
-                </div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="/images/services/2-2ProfessionalGardenCare.jpg"
+              alt="Seasonal planting"
+            />
+            <!-- <div class="placeholder">🐛</div> -->
+            <div class="image-overlay">
+              <h4>Seasonal planting</h4>
+              <!-- <p>Organic treatments</p> -->
             </div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="/images/services/2-3ProfessionalGardenCare.jpg"
+              alt="Pansy patch"
+            />
+            <!-- <div class="placeholder">🌱</div> -->
+            <div class="image-overlay">
+              <h4>Pansy patch</h4>
+              <!-- <p>Seasonal plant feeding</p> -->
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Service 2: Garden Maintenance Services -->
-    <section id="maintenance" class="service-section">
-        <div class="Services-container">
-            <div class="service-header">
-                <h2>2. Garden Maintenance Services</h2>
-                <p class="subtitle">Your plants need love—just like your home.</p>
+      <div class="feature-box">
+        <h3>🔁 Why Regular Maintenance is Important</h3>
+        <ul>
+          <li>Keeps your plants pest-free and healthy</li>
+          <li>Improves growth and flowering</li>
+          <li>Avoids overwatering or drying</li>
+          <li>Keeps your space tidy, beautiful, and peaceful</li>
+        </ul>
+      </div>
+
+      <div class="feature-box">
+        <h3>🛠 What We Offer</h3>
+        <ul>
+          <li>
+            Pruning and trimming: To maintain shape and stimulate healthy growth
+          </li>
+          <li>Pest and disease control: Organic and safe treatments</li>
+          <li>Fertilizer application: Based on plant needs and season</li>
+          <li>
+            Re-potting and soil refresh: For plants that outgrow their
+            containers
+          </li>
+          <li>
+            Seasonal plant replacements: Freshen up the garden look every few
+            months
+          </li>
+        </ul>
+      </div>
+
+      <div class="feature-box">
+        <h3>👥 Who It's For</h3>
+        <ul>
+          <li>Busy professionals</li>
+          <li>Elderly plant owners</li>
+          <li>Commercial properties</li>
+          <li>Families who want a garden but don't want the headache</li>
+        </ul>
+      </div>
+
+      <!-- Consultation Button -->
+      <div class="cta-buttons">
+        <a
+          href="/services"
+          class="btn btn-primary"
+          aria-label="View Green Aura gardening services"
+          >Our Services</a
+        >
+        <a
+          href="/contact"
+          class="btn btn-secondary"
+          aria-label="Get a quote from Green Aura"
+          >Get a Quote</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 3: Lawn Installation & Care -->
+<section id="lawn-care" class="service-section">
+  <div class="Services-container">
+    <div class="service-header">
+      <h2>3. Lawn Installation & Care</h2>
+      <p class="subtitle">Transform empty ground into soft, green beauty.</p>
+    </div>
+
+    <div class="service-content">
+      <p class="service-description">
+        A well-kept lawn brings instant charm to a backyard or garden space.
+        Whether it's for weekend picnics, kids playing, or simply enjoying
+        nature barefoot—lawns are timeless. At Green Aura, we install and
+        maintain lawns that stay lush, green, and easy to care for.
+      </p>
+
+      <!-- Image Gallery for Lawn Care -->
+      <div class="service-gallery">
+        <h3 class="gallery-title">Lawn Installation Process</h3>
+        <div class="gallery-grid grid-2">
+          <div class="gallery-item">
+            <img
+              src="/images/services/3-1LawnInstallationProcess.jpg"
+              alt="Lawn Installation Process"
+            />
+            <!-- <div class="placeholder">🌾</div> -->
+            <div class="image-overlay">
+              <h4>Installation Process</h4>
+              <!-- <p>Professional turf laying</p> -->
             </div>
-            
-            <div class="service-content">
-                <p class="service-description">
-                    Many people buy plants and forget that a garden is a living ecosystem. Over time, without proper care, leaves yellow, pests appear, and the beauty fades. That's where Green Aura steps in. We provide regular, professional plant care services so your garden stays fresh and thriving—even if you have no time to care for it yourself.
-                </p>
-
-                <!-- Image Gallery for Maintenance -->
-                <div class="service-gallery">
-                    <h3 class="gallery-title">Professional Garden Care</h3>
-                    <div class="gallery-grid grid-3">
-                        <div class="gallery-item">
-                            <img src="/images/services/2-1ProfessionalGardenCare.jpg" alt="Expert prunning">
-                            <!-- <div class="placeholder">✂️</div> -->
-                            <div class="image-overlay">
-                                <h4>Expert prunning</h4>
-                                <!-- <p>Healthy growth maintenance</p> -->
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="/images/services/2-2ProfessionalGardenCare.jpg" alt="Seasonal planting">
-                            <!-- <div class="placeholder">🐛</div> -->
-                            <div class="image-overlay">
-                                <h4>Seasonal planting</h4>
-                                <!-- <p>Organic treatments</p> -->
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="/images/services/2-3ProfessionalGardenCare.jpg" alt="Pansy patch">
-                            <!-- <div class="placeholder">🌱</div> -->
-                            <div class="image-overlay">
-                                <h4>Pansy patch</h4>
-                                <!-- <p>Seasonal plant feeding</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="feature-box">
-                    <h3>🔁 Why Regular Maintenance is Important</h3>
-                    <ul>
-                        <li>Keeps your plants pest-free and healthy</li>
-                        <li>Improves growth and flowering</li>
-                        <li>Avoids overwatering or drying</li>
-                        <li>Keeps your space tidy, beautiful, and peaceful</li>
-                    </ul>
-                </div>
-
-                <div class="feature-box">
-                    <h3>🛠 What We Offer</h3>
-                    <ul>
-                        <li>Pruning and trimming: To maintain shape and stimulate healthy growth</li>
-                        <li>Pest and disease control: Organic and safe treatments</li>
-                        <li>Fertilizer application: Based on plant needs and season</li>
-                        <li>Re-potting and soil refresh: For plants that outgrow their containers</li>
-                        <li>Seasonal plant replacements: Freshen up the garden look every few months</li>
-                    </ul>
-                </div>
-
-                <div class="feature-box">
-                    <h3>👥 Who It's For</h3>
-                    <ul>
-                        <li>Busy professionals</li>
-                        <li>Elderly plant owners</li>
-                        <li>Commercial properties</li>
-                        <li>Families who want a garden but don't want the headache</li>
-                    </ul>
-                </div>
-
-                <!-- Consultation Button -->
-                <div class="cta-buttons">
-            <a href="/services" class="btn btn-primary" aria-label="View Green Aura gardening services">Our Services</a>
-            <a href="/contact" class="btn btn-secondary" aria-label="Get a quote from Green Aura">Get a Quote</a>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="/images/services/3-2LawnInstallationProcess.jpg"
+              alt="Beautiful Finished Lawn"
+            />
+            <!-- <div class="placehol er">🏡</div> -->
+            <div class="image-overlay">
+              <h4>Finished Lawn</h4>
+              <!-- <p>Lush green carpet</p> -->
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="feature-box">
+        <h3>🌿 Natural or Artificial—What's Right for You?</h3>
+        <ul>
+          <li>
+            <strong>Natural Grass:</strong> More organic, cooler, and feels
+            great. Needs care and watering.
+          </li>
+          <li>
+            <strong>Artificial Grass:</strong> Maintenance-free, good for shaded
+            or dry areas, and pet-friendly.
+          </li>
+        </ul>
+      </div>
+
+      <div class="feature-box">
+        <h3>🛠 What We Do</h3>
+        <ul>
+          <li>Site Preparation: Soil levelling and clearing</li>
+          <li>
+            Base Setup: Adding organic compost, topsoil, and drainage layers
+          </li>
+          <li>
+            Turf Laying: Laying down grass rolls (or artificial turf) smoothly
+          </li>
+          <li>
+            First Watering & Aftercare Plan: We guide you through the next 2
+            weeks
+          </li>
+          <li>
+            Optional Maintenance: Monthly trimming, de-weeding, and feeding
+          </li>
+        </ul>
+      </div>
+
+      <!-- Consultation Button -->
+      <div class="consultation-cta">
+        <a href="/contact" class="btn btn-consultation">Get Lawn Quote</a>
+        <p class="cta-note">
+          Free site assessment and customized lawn solution
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 4: Garden Structures & Décor (Coming Soon) -->
+<section id="structures" class="service-section">
+  <div class="Services-container">
+    <div class="service-header">
+      <h2>4. Garden Structures & Decor (Coming Soon)</h2>
+      <p class="subtitle">Design meets functionality in your garden.</p>
+    </div>
+
+    <div class="service-content">
+      <p class="service-description">
+        At Green Aura, we're preparing to launch a new phase of services—adding
+        beautiful garden structures and décor that take your green space beyond
+        just plants. Think pergolas, vertical gardens, cozy benches, and
+        decorative pathways that make your terrace or lawn not only greener, but
+        also more inviting and usable.
+      </p>
+
+      <!-- Image Gallery for Future Structures -->
+      <div class="service-gallery">
+        <h3 class="gallery-title">Coming Soon - Garden Structures</h3>
+        <div class="gallery-grid grid-1">
+          <div class="gallery-item">
+            <img
+              src="/images/services/4-1GardenStructures.jpg"
+              alt="Garden Structure Concepts"
+            />
+            <!-- <div class="placeholder">🏗️</div> -->
+            <div class="image-overlay">
+              <h4>Design Concepts</h4>
+              <!-- <p>Pergolas, pathways & more</p> -->
             </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Service 3: Lawn Installation & Care -->
-    <section id="lawn-care" class="service-section">
-        <div class="Services-container">
-            <div class="service-header">
-                <h2>3. Lawn Installation & Care</h2>
-                <p class="subtitle">Transform empty ground into soft, green beauty.</p>
-            </div>
-            
-            <div class="service-content">
-                <p class="service-description">
-                    A well-kept lawn brings instant charm to a backyard or garden space. Whether it's for weekend picnics, kids playing, or simply enjoying nature barefoot—lawns are timeless. At Green Aura, we install and maintain lawns that stay lush, green, and easy to care for.
-                </p>
+      <div class="feature-box">
+        <h3>🌿 What You Can Expect:</h3>
+        <ul>
+          <li>
+            <strong>Pergolas & Shade Frames</strong> – Stylish wooden or metal
+            covers for a chill-out corner
+          </li>
+          <li>
+            <strong>Vertical Garden Walls</strong> – Frame-supported plant
+            setups for small spaces
+          </li>
+          <li>
+            <strong>Custom Planters & Borders</strong> – Stylish pots, boxes,
+            and clean edging
+          </li>
+          <li>
+            <strong>Garden Pathways</strong> – Pebble paths and stone steps to
+            define your space
+          </li>
+          <li>
+            <strong>Outdoor Lighting</strong> – Soft LED and solar lights for
+            cozy evening vibes
+          </li>
+        </ul>
+      </div>
 
-                <!-- Image Gallery for Lawn Care -->
-                <div class="service-gallery">
-                    <h3 class="gallery-title">Lawn Installation Process</h3>
-                    <div class="gallery-grid grid-2">
-                        <div class="gallery-item">
-                            <img src="/images/services/3-1LawnInstallationProcess.jpg" alt="Lawn Installation Process">
-                            <!-- <div class="placeholder">🌾</div> -->
-                            <div class="image-overlay">
-                                <h4>Installation Process</h4>
-                                <!-- <p>Professional turf laying</p> -->
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="/images/services/3-2LawnInstallationProcess.jpg" alt="Beautiful Finished Lawn">
-                            <!-- <div class="placehol er">🏡</div> -->
-                            <div class="image-overlay">
-                                <h4>Finished Lawn</h4>
-                                <!-- <p>Lush green carpet</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="feature-box">
+        <p style="text-align: center; font-style: italic; color: #666">
+          We're currently working on designs and materials—this service will
+          launch soon in select Kolkata locations. Early clients will get
+          priority booking and discounts.
+        </p>
+      </div>
 
-                <div class="feature-box">
-                    <h3>🌿 Natural or Artificial—What's Right for You?</h3>
-                    <ul>
-                        <li><strong>Natural Grass:</strong> More organic, cooler, and feels great. Needs care and watering.</li>
-                        <li><strong>Artificial Grass:</strong> Maintenance-free, good for shaded or dry areas, and pet-friendly.</li>
-                    </ul>
-                </div>
+      <!-- Consultation Button -->
+      <div class="consultation-cta">
+        <a href="/contact" class="btn btn-consultation btn-coming-soon"
+          >Join Waitlist</a
+        >
+        <p class="cta-note">
+          Be the first to know when garden structures are available
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <div class="feature-box">
-                    <h3>🛠 What We Do</h3>
-                    <ul>
-                        <li>Site Preparation: Soil levelling and clearing</li>
-                        <li>Base Setup: Adding organic compost, topsoil, and drainage layers</li>
-                        <li>Turf Laying: Laying down grass rolls (or artificial turf) smoothly</li>
-                        <li>First Watering & Aftercare Plan: We guide you through the next 2 weeks</li>
-                        <li>Optional Maintenance: Monthly trimming, de-weeding, and feeding</li>
-                    </ul>
-                </div>
-
-                <!-- Consultation Button -->
-                <div class="consultation-cta">
-                    <a href="/contact" class="btn btn-consultation">Get Lawn Quote</a>
-                    <p class="cta-note">Free site assessment and customized lawn solution</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service 4: Garden Structures & Décor (Coming Soon) -->
-    <section id="structures" class="service-section">
-        <div class="Services-container">
-            <div class="service-header">
-                <h2>4. Garden Structures & Decor (Coming Soon)</h2>
-                <p class="subtitle">Design meets functionality in your garden.</p>
-            </div>
-            
-            <div class="service-content">
-                <p class="service-description">
-                    At Green Aura, we're preparing to launch a new phase of services—adding beautiful garden structures and décor that take your green space beyond just plants. Think pergolas, vertical gardens, cozy benches, and decorative pathways that make your terrace or lawn not only greener, but also more inviting and usable.
-                </p>
-
-                <!-- Image Gallery for Future Structures -->
-                <div class="service-gallery">
-                    <h3 class="gallery-title">Coming Soon - Garden Structures</h3>
-                    <div class="gallery-grid grid-1">
-                        <div class="gallery-item">
-                            <img src="/images/services/4-1GardenStructures.jpg" alt="Garden Structure Concepts">
-                            <!-- <div class="placeholder">🏗️</div> -->
-                            <div class="image-overlay">
-                                <h4>Design Concepts</h4>
-                                <!-- <p>Pergolas, pathways & more</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="feature-box">
-                    <h3>🌿 What You Can Expect:</h3>
-                    <ul>
-                        <li><strong>Pergolas & Shade Frames</strong> – Stylish wooden or metal covers for a chill-out corner</li>
-                        <li><strong>Vertical Garden Walls</strong> – Frame-supported plant setups for small spaces</li>
-                        <li><strong>Custom Planters & Borders</strong> – Stylish pots, boxes, and clean edging</li>
-                        <li><strong>Garden Pathways</strong> – Pebble paths and stone steps to define your space</li>
-                        <li><strong>Outdoor Lighting</strong> – Soft LED and solar lights for cozy evening vibes</li>
-                    </ul>
-                </div>
-
-                <div class="feature-box">
-                    <p style="text-align: center; font-style: italic; color: #666;">
-                        We're currently working on designs and materials—this service will launch soon in select Kolkata locations. Early clients will get priority booking and discounts.
-                    </p>
-                </div>
-
-                <!-- Consultation Button -->
-                <div class="consultation-cta">
-                    <a href="/contact" class="btn btn-consultation btn-coming-soon">Join Waitlist</a>
-                    <p class="cta-note">Be the first to know when garden structures are available</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <%- include('partials/footer') %>
+<%- include('partials/footer') %>
