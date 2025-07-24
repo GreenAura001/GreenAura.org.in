@@ -69,4 +69,12 @@ router.get('/faqs', (req, res) => {
   });
 });
 
+//  Privacy Policy page
+router.get('/privacy-policy', (req, res) => {
+  res.render('privacypolicy', { 
+    title: 'Privacy Policy - Green Aura',
+    activeRoute: 'privacypolicy'
+  });
+});
+
 module.exports = router;

@@ -695,3 +695,322 @@
   background: #45a049; /* Darker green on hover */
 }
 
+/* Green Aura Theme CSS for Why Choose Us & Service Areas Sections */
+
+/* Base Variables for Green Aura Theme */
+:root {
+  --primary-green: #2d7a3e;
+  --secondary-green: #4a9f5f;
+  --light-green: #e8f5ea;
+  --accent-green: #1a5d28;
+  --text-dark: #2c3e2d;
+  --text-light: #6b7c6d;
+  --white: #ffffff;
+  --cream: #fafbfa;
+  --border-light: #d4e8d7;
+  --shadow-light: rgba(45, 122, 62, 0.1);
+  --shadow-medium: rgba(45, 122, 62, 0.15);
+}
+
+/* Container Base Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background: linear-gradient(135deg, var(--cream) 0%, var(--light-green) 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose-us::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 200%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23e8f5ea" opacity="0.3"/></svg>') repeat;
+  animation: float 20s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-20px) rotate(360deg); }
+}
+
+.why-choose-us h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-green);
+  margin-bottom: 3rem;
+  position: relative;
+  line-height: 1.2;
+}
+
+.why-choose-us h2::after {
+  content: '🌿';
+  display: block;
+  font-size: 2rem;
+  margin-top: 1rem;
+  animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.benefit-item {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px var(--shadow-light);
+  border: 2px solid var(--border-light);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.benefit-item:hover::before {
+  transform: scaleX(1);
+}
+
+.benefit-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px var(--shadow-medium);
+  border-color: var(--secondary-green);
+}
+
+.benefit-item h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--accent-green);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.benefit-item h3::before {
+  content: '🌱';
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.benefit-item p {
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Service Areas Section */
+.service-areas {
+  background: var(--white);
+  padding: 80px 0;
+  position: relative;
+}
+
+.service-areas::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+}
+
+.service-areas h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-green);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.service-areas h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+  border-radius: 2px;
+}
+
+.service-areas > .container > p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.areas-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 3rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.areas-list span {
+  background: linear-gradient(135deg, var(--light-green), #f0f9f1);
+  color: var(--accent-green);
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: 500;
+  border: 2px solid var(--border-light);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.areas-list span::before {
+  content: '📍';
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  font-size: 1.2rem;
+  transform: translateY(-50%);
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.areas-list span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+  transition: width 0.4s ease;
+}
+
+.areas-list span:hover {
+  background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+  color: var(--white);
+  border-color: var(--primary-green);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 25px var(--shadow-medium);
+}
+
+.areas-list span:hover::before {
+  left: 10px;
+  opacity: 1;
+}
+
+.areas-list span:hover::after {
+  width: 100%;
+}
+
+.service-areas .text-link {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.service-areas .text-link:hover {
+  color: var(--accent-green);
+  border-bottom-color: var(--secondary-green);
+}
+
+.service-areas .text-link::after {
+  content: '→';
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.service-areas .text-link:hover::after {
+  transform: translateX(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-choose-us,
+  .service-areas {
+    padding: 60px 0;
+  }
+  
+  .why-choose-us h2,
+  .service-areas h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .benefit-item {
+    padding: 2rem 1.5rem;
+  }
+  
+  .areas-list {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.8rem;
+  }
+  
+  .areas-list span {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-us h2,
+  .service-areas h2 {
+    font-size: 1.8rem;
+  }
+  
+  .areas-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .benefit-item h3 {
+    font-size: 1.2rem;
+  }
+}

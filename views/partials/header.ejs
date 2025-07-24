@@ -3,13 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title><%= title || 'Professional Gardening & Landscaping Services | Green Aura Kolkata' %></title>
+  <meta name="description" content="Transform your terrace, balcony & backyard with Green Aura's expert gardening services. Professional garden design, maintenance, lawn care & landscaping solutions. Get a free quote today!">
+  <meta name="keywords" content="gardening services, terrace garden design, balcony garden, landscaping, garden maintenance, lawn care, plant care services, professional gardeners, backyard landscaping, Green Aura"
+  <meta name="author" content="Green Aura">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Tags for Social Media -->
+  <meta property="og:title" content="<%= title || 'Professional Gardening & Landscaping Services | Green Aura' %>">
+  <meta property="og:description" content="Transform your outdoor spaces with Green Aura's expert gardening and landscaping services. Specializing in terrace gardens, balcony designs, and comprehensive garden maintenance.">
+  <meta property="og:image" content="https://greenaura.org.in/images/og-image.jpg">
+  <meta property="og:url" content="https://greenaura.org.in/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Green Aura">
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= title || 'Professional Gardening & Landscaping Services | Green Aura' %>">
+  <meta name="twitter:description" content="Expert gardening and landscaping services. Transform your terrace, balcony & backyard into beautiful green spaces.">
+  <meta name="twitter:image" content="https://greenaura.org.in/images/og-image.jpg">
+  <meta name="twitter:site" content="@greenauraorgin">
+  
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Green Aura",
+    "description": "Professional gardening and landscaping services specializing in terrace gardens, balcony designs, and garden maintenance in West Bengal.",
+    "url": "https://greenaura.org.in/",
+    "telephone": "+91-6291-279-984",
+    "email": "support@greenaura.org.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "No 207B, Thakurpukur Rd, Thakurpukur Bazar, Paschim Barisha",
+      "addressLocality": "Kolkata",
+      "addressRegion": "West Bengal",
+      "postalCode": "700063",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "22.4734",
+      "longitude": "88.3126"
+    },
+    "openingHours": "Mo-Sa 09:00-18:00",
+    "priceRange": "$$",
+    "areaServed": "West Bengal",
+    "serviceType": ["Gardening Services", "Landscaping", "Garden Design", "Garden Maintenance", "Lawn Care"],
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61577903425387",
+      "https://www.instagram.com/greenaura.org.in/",
+      "https://x.com/greenauraorgin",
+      "https://medium.com/@greenaura"
+    ]
+  }
+  </script>
+  
+  <link rel="canonical" href="https://greenaura.org.in/">
   <link rel="icon" type="image/x-icon" href="/images/GreenAura-loga.ico">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  
+  <!-- External Stylesheets -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-  <title><%= title %></title>
   <!-- CSS files -->
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/header.css">
@@ -28,12 +90,12 @@
   <header>
     <div class="container">
       <div class="logo">
-        <a href="/">
-          <img src="/images/logo.png" alt="Green Aura">
+        <a href="/" aria-label="Green Aura - Professional Gardening Services">
+          <img src="/images/logo.png" alt="Green Aura Logo - Professional Gardening and Landscaping Services">
           <!-- <span>Green Aura</span> -->
         </a>
       </div>
-      <nav id="nav-menu">
+      <nav id="nav-menu" aria-label="Main Navigation">
         <ul>
           <li><a href="/" class="<%= activeRoute === 'home' ? 'active' : '' %>">Home</a></li>
           <li><a href="/services" class="<%= activeRoute === 'services' ? 'active' : '' %>">Services</a></li>
@@ -43,7 +105,7 @@
           <li><a href="/faqs" class="<%= activeRoute === 'faqs' ? 'active' : '' %>">FAQs</a></li>
         </ul>
       </nav>
-      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile navigation menu">
         <span></span>
         <span></span>
         <span></span>
